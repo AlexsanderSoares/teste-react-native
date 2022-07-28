@@ -36,6 +36,13 @@ export const PatientDataSubtitle = styled.Text`
     color: #fff;
 `;
 
+export const FormContainer = styled.View`
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 15px;
+`;
+
 export const FormField = styled.TextInput.attrs({
     placeholder: props => props.placeholder
 })`
