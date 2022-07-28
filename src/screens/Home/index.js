@@ -3,6 +3,8 @@ import { Container, WelcomeTextContainer,
                 WelcomeTextTitle, WelcomeTextSubtitle, 
                     StartSchedulingContainer, StartSchedulingButton, StartSchedulingButtonText } from './styles';
 
+import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
+
 const Home = () => {
   return (
     <Container>
@@ -13,9 +15,10 @@ const Home = () => {
         </WelcomeTextContainer>
 
         <StartSchedulingContainer>
-            <StartSchedulingButton>
+            <StartSchedulingButton onPress={() => {}}>
                 <StartSchedulingButtonText>
                     Iniciar agendamento
+                    <IconFontAwesome name='arrow-right' color="#fff" size={24}/>
                 </StartSchedulingButtonText>
             </StartSchedulingButton>
         </StartSchedulingContainer>
