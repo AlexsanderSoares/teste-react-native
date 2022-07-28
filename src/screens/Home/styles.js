@@ -32,6 +32,13 @@ export const WelcomeTextSubtitle = styled.Text`
     font-family: Arial, Helvetica, sans-serif;
 `;
 
+export const StartSchedulingContainer = styled.View`
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+`;
+
 export const StartSchedulingButton = styled.TouchableWithoutFeedback`
     width: 200px;
     height: 60px;
