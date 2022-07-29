@@ -25,14 +25,14 @@ export const PatientDataTitleContainer = styled.View`
 
 export const PatientDataTitle = styled.Text`
     font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-weight: bold;
     color: #fff;
 `;
 
 export const PatientDataSubtitle = styled.Text`
     font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: sans-serif; */
     color: #fff;
 `;
 
@@ -64,7 +64,7 @@ export const ButtonNext = styled.TouchableWithoutFeedback`
 
 export const ButtonNextText = styled.Text`
     font-size: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: sans-serif; */
     color: #fff;
     font-weight: bold;
 `;

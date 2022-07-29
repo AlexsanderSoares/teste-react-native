@@ -3,7 +3,7 @@ import LinearGradient from 'react-native-linear-gradient'
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 export const Container = styled(LinearGradient).attrs({
-    colors: ['#00FA9A', '#00FF7F'],
+    colors: ['#00FF7F', '#00FA9A'],
     start: {x: 0, y: 0},
     end: {x: 1, y: 1}
 })`
@@ -11,7 +11,7 @@ export const Container = styled(LinearGradient).attrs({
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: ${70 + getStatusBarHeight()}px 20px 0 20px;
+    padding: 0px 20px 0 20px;
 `;
 
 export const WelcomeTextContainer = styled.View`
@@ -20,16 +20,15 @@ export const WelcomeTextContainer = styled.View`
 `;
 
 export const WelcomeTextTitle = styled.Text`
-    font-size: 2rem;
+    font-size: 40px;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 `;
 
 export const WelcomeTextSubtitle = styled.Text`
-    font-size: 1rem;
+    font-size: 24px;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
 `;
 
 export const StartSchedulingContainer = styled.View`
@@ -39,10 +38,10 @@ export const StartSchedulingContainer = styled.View`
     margin-top: 50px;
 `;
 
-export const StartSchedulingButton = styled.TouchableWithoutFeedback`
+export const StartSchedulingButton = styled.TouchableOpacity`
     width: 200px;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
     align-items: center;
     justify-content: center;
@@ -51,8 +50,7 @@ export const StartSchedulingButton = styled.TouchableWithoutFeedback`
 `;
 
 export const StartSchedulingButtonText = styled.Text`
-    font-size: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+    font-size: 24px;
+    color: #777;
     font-weight: bold;
 `;
