@@ -30,3 +30,31 @@ export const MedicalSpecialtySubTitle = styled.Text`
     color: #fff;
     /* font-weight: bold; */
 `;
+
+export const FormContainer = styled.View`
+    width: 100%;
+`;
+
+export const ButtonNextContainer = styled.View`
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+`;
+
+export const ButtonNext = styled.TouchableOpacity`
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #fff;
+`;
+
+export const ButtonNextText = styled.Text`
+    font-size: 20px;
+    color: #777;
+    font-weight: bold;
+`;
