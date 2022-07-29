@@ -6,7 +6,7 @@ import { Container, MedicalSpecialtyTitleContainer, MedicalSpecialtyTitle,
 import {Picker} from '@react-native-picker/picker';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 
-const MedicalSpecialty = () => {
+const MedicalSpecialty = (props) => {
 
   const [selectedLanguage, setSelectedLanguage] = useState();
 
@@ -37,7 +37,7 @@ const MedicalSpecialty = () => {
               </Picker>
             </FormContainer>
             <ButtonNextContainer>
-                <ButtonNext>
+                <ButtonNext onPress={() => props.navigation.navigate("SelectDate")}>
                     <ButtonNextText>
                         Proximo passo
                         <IconFontAwesome name='arrow-right' color="#777" size={20}/>
