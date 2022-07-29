@@ -40,7 +40,7 @@ export const FormContainer = styled.View`
 
 export const FormField = styled.TextInput`
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 15px;
     width: 95%;
     height: 60px;
