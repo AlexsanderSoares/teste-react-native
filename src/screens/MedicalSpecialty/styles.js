@@ -13,3 +13,20 @@ export const Container = styled(LinearGradient).attrs({
     align-content: center;
     padding: 0px 20px 0 20px;
 `;
+
+export const MedicalSpecialtyTitleContainer = styled.View`
+    text-align: center;
+    padding: 5px;
+`;
+
+export const MedicalSpecialtyTitle = styled.Text`
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+`;
+
+export const MedicalSpecialtySubTitle = styled.Text`
+    font-size: 24px;
+    color: #fff;
+    /* font-weight: bold; */
+`;
