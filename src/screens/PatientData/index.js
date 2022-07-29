@@ -5,7 +5,7 @@ import { Container, ScrollViewPatientData, PatientDataTitleContainer,
 
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 
-const PatientData = () => {
+const PatientData = (props) => {
   return (
     <Container>
         <PatientDataTitleContainer>
@@ -22,7 +22,7 @@ const PatientData = () => {
             <FormField placeholder="Data de nascimento"/>
             <FormField placeholder="Telefone"/>
             <ButtonNext>
-                <ButtonNextText>
+                <ButtonNextText onPress={() => props.navigation.navigate('MedicalSpecialty')}>
                     Proximo passo
                     <IconFontAwesome name='arrow-right' color="#777" size={20}/>
                 </ButtonNextText>

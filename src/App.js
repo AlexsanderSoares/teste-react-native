@@ -8,16 +8,16 @@ import MedicalSpecialty from './screens/MedicalSpecialty';
 
 const Stack = createNativeStackNavigator();
 
+const headerConfig = {headerShown: true, headerTransparent: true, 
+                                  headerTitle: '', headerTintColor: "#fff"}
 const App = () => {
   return (
 
     <NavigationContainer>
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-            <Stack.Screen name="Home" component={Home}/>
-            <Stack.Screen name="PatientData" component={PatientData} options={{headerShown: true, 
-                                                                                  headerTransparent: true, headerTitle: '', 
-                                                                                              headerTintColor: "#fff"}}/>
-            <Stack.Screen name="MedicalSpecialty" component={MedicalSpecialty}/>
+        <Stack.Navigator>
+            <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
+            <Stack.Screen name="PatientData" component={PatientData} options={headerConfig}/>
+            <Stack.Screen name="MedicalSpecialty" component={MedicalSpecialty} options={headerConfig}/>
         </Stack.Navigator>
     </NavigationContainer>
 
