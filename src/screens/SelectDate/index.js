@@ -19,7 +19,7 @@ const SelectDate = (props) => {
                     Selecione a data que você deseja agendar o atendimento.
                 </SelectDateSubtitle>
             </SelectDateTitleContainer>
-            <CalendarPicker onDateChange={setSelectedDate}/>
+            <CalendarPicker onDateChange={setSelectedDate} selectedDayColor="#fff"/>
             <ButtonNextConatiner>
                 <ButtonNext>
                     <ButtonNextText>
