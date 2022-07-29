@@ -19,7 +19,7 @@ const Home = (props) => {
                 <StartSchedulingButton onPress={() => props.navigation.navigate("PatientData")}>
                     <StartSchedulingButtonText>
                         Comerçar
-                        <IconFontAwesome name="arrow-right" size={24} color="#777" />
+                        <IconFontAwesome name="arrow-right" size={20} color="#777" />
                     </StartSchedulingButtonText>
                 </StartSchedulingButton>
             </StartSchedulingContainer>

@@ -50,7 +50,7 @@ export const StartSchedulingButton = styled.TouchableOpacity`
 `;
 
 export const StartSchedulingButtonText = styled.Text`
-    font-size: 24px;
+    font-size: 20px;
     color: #777;
     font-weight: bold;
 `;

@@ -14,12 +14,11 @@ export const Container = styled(LinearGradient).attrs({
     padding: 0px 20px 0 20px;
 `;
 
-export const ScrollViewPatientData = styled.ScrollView``;
+export const ScrollViewPatientData = styled.ScrollView`
+    flex: 1;
+`;
 
 export const PatientDataTitleContainer = styled.View`
-    align-items: center;
-    align-content: center;
-    justify-content: center;
     padding: 5px;
 `;
 
@@ -35,34 +34,34 @@ export const PatientDataSubtitle = styled.Text`
 `;
 
 export const FormContainer = styled.View`
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    margin-top: 15px;
+    width: 100%;
+    align-items:center;
 `;
 
-export const FormField = styled.TextInput.attrs({
-    placeholder: props => props.placeholder
-})`
+export const FormField = styled.TextInput`
     background-color: #fff;
     border-radius: 5px;
-    padding: 5px;
+    padding: 15px;
+    width: 95%;
+    height: 60px;
+    margin-top: 10px;
 `;
 
-export const ButtonNext = styled.TouchableWithoutFeedback`
+export const ButtonNext = styled.TouchableOpacity`
     width: 200px;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
     align-items: center;
     justify-content: center;
     align-content: center;
     background-color: #fff;
+    margin-top: 20px;
 `;
 
 export const ButtonNextText = styled.Text`
-    font-size: 24px;
-    color: #fff;
+    font-size: 20px;
+    color: #777;
     font-weight: bold;
 `;
 

@@ -8,26 +8,26 @@ import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 const PatientData = () => {
   return (
     <Container>
-        <ScrollViewPatientData>
-            <PatientDataTitleContainer>
-                <PatientDataTitle>
-                    Dados do paciente
-                </PatientDataTitle>
-                <PatientDataSubtitle>
-                    Os campos sinalizados com * são obrigatórios
-                </PatientDataSubtitle>
-            </PatientDataTitleContainer>
-            <FormContainer>
-                <FormField placeholder="Nome completo"/>
-                <FormField placeholder="CPF"/>
-                <ButtonNext>
-                    <ButtonNextText>
-                        Proximo passo
-                        <IconFontAwesome name="arrow-right" color="#fff" size={24}/>
-                    </ButtonNextText>
-                </ButtonNext>
-            </FormContainer>
-        </ScrollViewPatientData>
+        <PatientDataTitleContainer>
+            <PatientDataTitle>
+                Dados do paciente
+            </PatientDataTitle>
+            <PatientDataSubtitle>
+                Preencha os campos a baixo com os dados do paciente.
+            </PatientDataSubtitle>
+        </PatientDataTitleContainer>
+        <FormContainer>
+            <FormField placeholder="Nome"/>
+            <FormField placeholder="CPF"/>
+            <FormField placeholder="Data de nascimento"/>
+            <FormField placeholder="Telefone"/>
+            <ButtonNext>
+                <ButtonNextText>
+                    Proximo passo
+                    <IconFontAwesome name='arrow-right' color="#777" size={20}/>
+                </ButtonNextText>
+            </ButtonNext>
+        </FormContainer>
     </Container>
   );
 }
