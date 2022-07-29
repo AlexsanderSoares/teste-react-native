@@ -21,7 +21,7 @@ const SelectDate = (props) => {
             </SelectDateTitleContainer>
             <CalendarPicker onDateChange={setSelectedDate} selectedDayColor="#fff"/>
             <ButtonNextConatiner>
-                <ButtonNext>
+                <ButtonNext onPress={() => props.navigation.navigate("FinishScheduling")}>
                     <ButtonNextText>
                         Conferir e agendar
                         <IconFontAwesome name="arrow-right" color="#777" size={18}/>
