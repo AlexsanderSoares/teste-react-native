@@ -13,7 +13,10 @@ const App = () => {
     <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen name="Home" component={Home}/>
-            <Stack.Screen name="PatientData" component={PatientData}/>
+            <Stack.Screen name="PatientData" component={PatientData} options={{headerShown: true, 
+                                                                                  headerTransparent: true, headerTitle: '', 
+                                                                                              headerTintColor: "#fff"}}/>
+            <Stack.Screen name="MedicalSpecialty" component={Home}/>
         </Stack.Navigator>
     </NavigationContainer>
 
