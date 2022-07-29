@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './screens/Home';
 import PatientData from './screens/PatientData';
+import MedicalSpecialty from './screens/MedicalSpecialty';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +17,7 @@ const App = () => {
             <Stack.Screen name="PatientData" component={PatientData} options={{headerShown: true, 
                                                                                   headerTransparent: true, headerTitle: '', 
                                                                                               headerTintColor: "#fff"}}/>
-            <Stack.Screen name="MedicalSpecialty" component={Home}/>
+            <Stack.Screen name="MedicalSpecialty" component={MedicalSpecialty}/>
         </Stack.Navigator>
     </NavigationContainer>
 
