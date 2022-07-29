@@ -5,7 +5,7 @@ import { Container, WelcomeTextContainer,
 
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 
-const Home = () => {
+const Home = (props) => {
   return (
     <Container>
         <WelcomeTextContainer>
@@ -16,7 +16,7 @@ const Home = () => {
                 Toque no botão abaixo para fazer o agendamento da consulta.
             </WelcomeTextSubtitle>
             <StartSchedulingContainer>
-                <StartSchedulingButton >
+                <StartSchedulingButton onPress={() => props.navigation.navigate("PatientData")}>
                     <StartSchedulingButtonText>
                         Comerçar
                         <IconFontAwesome name="arrow-right" size={24} color="#777" />
