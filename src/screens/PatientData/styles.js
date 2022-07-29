@@ -3,7 +3,7 @@ import LinearGradient from 'react-native-linear-gradient'
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 export const Container = styled(LinearGradient).attrs({
-    colors: ['#00FA9A', '#00FF7F'],
+    colors: ['#00FF7F', '#00FA9A'],
     start: {x: 0, y: 0},
     end: {x: 1, y: 1}
 })`
@@ -11,7 +11,7 @@ export const Container = styled(LinearGradient).attrs({
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: ${70 + getStatusBarHeight()}px 20px 0 20px;
+    padding: 0px 20px 0 20px;
 `;
 
 export const ScrollViewPatientData = styled.ScrollView``;
@@ -24,15 +24,13 @@ export const PatientDataTitleContainer = styled.View`
 `;
 
 export const PatientDataTitle = styled.Text`
-    font-size: 2rem;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 40px;
     font-weight: bold;
     color: #fff;
 `;
 
 export const PatientDataSubtitle = styled.Text`
-    font-size: 1rem;
-    /* font-family: sans-serif; */
+    font-size: 24px;
     color: #fff;
 `;
 
@@ -63,8 +61,7 @@ export const ButtonNext = styled.TouchableWithoutFeedback`
 `;
 
 export const ButtonNextText = styled.Text`
-    font-size: 1.5em;
-    /* font-family: sans-serif; */
+    font-size: 24px;
     color: #fff;
     font-weight: bold;
 `;
