@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 
 import { Container, MedicalSpecialtyTitleContainer, MedicalSpecialtyTitle, 
                                               MedicalSpecialtySubTitle, FormContainer, ButtonNextContainer,
@@ -6,9 +6,19 @@ import { Container, MedicalSpecialtyTitleContainer, MedicalSpecialtyTitle,
 import {Picker} from '@react-native-picker/picker';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 
+import {SchedulingContext} from '../../contexts/scheduling';
+
 const MedicalSpecialty = (props) => {
 
-  const [selectedLanguage, setSelectedLanguage] = useState();
+  const [selectedMedicalSpecialty, setSelectedMedicalSpecialty] = useState("");
+
+  const {saveMedicalSpecialty} = useContext(SchedulingContext);
+
+  function handleNext(){
+      saveMedicalSpecialty(selectedMedicalSpecialty);
+
+      props.navigation.navigate("SelectDate");
+  }
 
   return (
         <Container>
@@ -22,9 +32,9 @@ const MedicalSpecialty = (props) => {
             </MedicalSpecialtyTitleContainer>
             <FormContainer>
               <Picker
-                selectedValue={selectedLanguage}
+                selectedValue={selectedMedicalSpecialty}
                 onValueChange={(itemValue, itemIndex) =>
-                  setSelectedLanguage(itemValue)
+                  setSelectedMedicalSpecialty(itemValue)
                 }
                 style={{
                   color: "#777",
@@ -32,12 +42,12 @@ const MedicalSpecialty = (props) => {
                   marginTop: 15,
                 }}>
                   <Picker.Item label="Selecionar especialidade médica" value="" />
-                  <Picker.Item label="Java" value="java" />
-                  <Picker.Item label="JavaScript" value="js" />
+                  <Picker.Item label="Cardiologista" value="Cardiologista" />
+                  <Picker.Item label="Clínico Geral" value="Clínico Geral" />
               </Picker>
             </FormContainer>
             <ButtonNextContainer>
-                <ButtonNext onPress={() => props.navigation.navigate("SelectDate")}>
+                <ButtonNext onPress={handleNext}>
                     <ButtonNextText>
                         Proximo passo
                         <IconFontAwesome name='arrow-right' color="#777" size={20}/>
