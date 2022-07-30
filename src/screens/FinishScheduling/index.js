@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, RowContainer, InfoContainer, Label, Info,} from './styles';
+import { Container, InfoContainer} from './styles';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 import api from '../../services/api/axios';
