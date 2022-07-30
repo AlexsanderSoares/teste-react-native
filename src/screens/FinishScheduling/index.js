@@ -6,6 +6,8 @@ import api from '../../services/api/axios';
 import {SchedulingContext} from '../../contexts/scheduling';
 import { Alert } from 'react-native';
 
+import RowList from '../../components/RowList';
+
 const FinishScheduling = (props) => {
 
     const {scheduling} = useContext(SchedulingContext);
@@ -27,54 +29,12 @@ const FinishScheduling = (props) => {
                 title="Confira os dados e confirme"
                 subtitle="Confira os dados abaixo, caso estejam corretos confirme para agendar." />
             <InfoContainer>
-                <RowContainer>
-                    <Label>
-                        Nome: 
-                    </Label>
-                    <Info>
-                        {scheduling.name}
-                    </Info>
-                </RowContainer>
-                <RowContainer>
-                    <Label>
-                        CPF: 
-                    </Label>
-                    <Info>
-                        {scheduling.cpf}
-                    </Info>
-                </RowContainer>
-                <RowContainer>
-                    <Label>
-                        Data de nascimento: 
-                    </Label>
-                    <Info>
-                        {scheduling.birthDate}
-                    </Info>
-                </RowContainer>
-                <RowContainer>
-                    <Label>
-                        Telefone: 
-                    </Label>
-                    <Info>
-                        {scheduling.phone}
-                    </Info>
-                </RowContainer>
-                <RowContainer>
-                    <Label>
-                        Especialidade médica: 
-                    </Label>
-                    <Info>
-                        {scheduling.medicalSpecialty}
-                    </Info>
-                </RowContainer>
-                <RowContainer>
-                    <Label>
-                        Data para agendamento: 
-                    </Label>
-                    <Info>
-                        {new Date(scheduling.dateScheduling).toLocaleDateString()}
-                    </Info>
-                </RowContainer>
+                <RowList label="Nome" info={scheduling.name}/>
+                <RowList label="CPF" info={scheduling.cpf}/>
+                <RowList label="Data de nascimento" info={scheduling.birthDate}/>
+                <RowList label="Telefone" info={scheduling.phone}/>
+                <RowList label="Especialidade médica" info={scheduling.medicalSpecialty}/>
+                <RowList label="Data para agendamento" info={new Date(scheduling.dateScheduling).toLocaleDateString()}/>
             </InfoContainer>
             <Button 
                 text="Confirmar"
