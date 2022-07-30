@@ -33,10 +33,10 @@ const PatientData = (props) => {
                 subtitle="Preencha os campos abaixo com os dados do paciente"/>
 
             <FormContainer>
-                <FormField placeholder="Nome" value={name} onChangeText={setName} mask="name"/>
-                <FormField placeholder="CPF" keyboardType="numeric" value={cpf} onChangeText={setCpf} mask="cpf"/>
-                <FormField placeholder="Data de nascimento" keyboardType="numeric" value={birthDate} onChangeText={setBirthDate} mask="birthDate"/>
-                <FormField placeholder="Phone" keyboardType="phone-pad" value={phone} onChangeText={setPhone} mask="phone"/>
+                <FormField label="Nome" placeholder="Ex: João da Silva" value={name} onChangeText={setName} mask="name"/>
+                <FormField label="CPF" keyboardType="numeric" value={cpf} onChangeText={setCpf} mask="cpf"/>
+                <FormField label="Data de nascimento" keyboardType="numeric" value={birthDate} onChangeText={setBirthDate} mask="birthDate"/>
+                <FormField label="Phone" keyboardType="phone-pad" value={phone} onChangeText={setPhone} mask="phone"/>
                 <Button 
                     text="Proximo passo"
                     onPress={() => handleNext()} 

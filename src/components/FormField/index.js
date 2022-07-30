@@ -1,7 +1,7 @@
 import React from 'react';
 import { Masks, useMaskedInputProps } from 'react-native-mask-input';
 
-import { FormFieldComponent } from './styles';
+import { FormFieldComponent, LabelField, LabelContainer } from './styles';
 
 const FormField = (props) => {
 
@@ -29,7 +29,14 @@ const FormField = (props) => {
         }
     }
     return (
-        <FormFieldComponent {...maskedInputProps[props.mask] ?? "name"}/>
+        <>
+            <LabelContainer>
+                <LabelField>
+                    {props.label}
+                </LabelField>
+            </LabelContainer>
+                <FormFieldComponent {...maskedInputProps[props.mask] ?? "name"}/>
+        </>
     );
 }
 
