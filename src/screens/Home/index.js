@@ -3,22 +3,18 @@ import { Container, WelcomeTextContainer,
                 WelcomeTextTitle, WelcomeTextSubtitle, StartSchedulingContainer} from './styles';
 
 import Button from '../../components/Button';
+import Title from '../../components/Title';
 
 const Home = (props) => {
   return (
     <Container>
-        <WelcomeTextContainer>
-            <WelcomeTextTitle>
-                Olá, seja bem vindo(a)
-            </WelcomeTextTitle>
-            <WelcomeTextSubtitle>
-                Toque no botão abaixo para fazer o agendamento da consulta.
-            </WelcomeTextSubtitle>
-            <Button 
-                    text="Começar"
-                    onPress={() => props.navigation.navigate("PatientData")} 
-                    icon="arrow-right"/>
-        </WelcomeTextContainer>
+        <Title 
+            title="Olá, seja bem vindo(a)" 
+            subtitle="Toque no botão abaixo para fazer o agendamento da consulta"/>
+        <Button 
+                text="Começar"
+                onPress={() => props.navigation.navigate("PatientData")} 
+                icon="arrow-right"/>
     </Container>
   );
 }
