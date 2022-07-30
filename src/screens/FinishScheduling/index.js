@@ -5,6 +5,7 @@ import { Container, FinishSchedulingTitleContainer,
                                 FinishButtonContainer} from './styles';
 
 import Button from '../../components/Button';
+import Title from '../../components/Title';
 
 import api from '../../services/api/axios';
 
@@ -29,14 +30,9 @@ const FinishScheduling = (props) => {
 
     return (
         <Container>
-            <FinishSchedulingTitleContainer>
-                <FinishSchedulingTitle>
-                    Confira os dados e confirme
-                </FinishSchedulingTitle>
-                <FinishSchedulingSubtitle>
-                    Confira se os dados abaixo, caso estejam corretos confirme para finalizar o agendamento.
-                </FinishSchedulingSubtitle>
-            </FinishSchedulingTitleContainer>
+            <Title 
+                title="Confira os dados e confirme"
+                subtitle="Confira os dados abaixo, caso estejam corretos confirme para agendar." />
             <InfoContainer>
                 <RowContainer>
                     <Label>

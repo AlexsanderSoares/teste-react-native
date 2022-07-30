@@ -1,10 +1,9 @@
 import React, {useState, useContext} from 'react';
 import {Alert} from 'react-native';
-import { Container, ScrollViewPatientData, PatientDataTitleContainer, 
-            PatientDataTitle, PatientDataSubtitle, FormContainer, 
-                    FormField } from './styles';
+import { Container, FormContainer, FormField } from './styles';
 
 import Button from '../../components/Button';
+import Title from '../../components/Title';
 
 import {SchedulingContext} from '../../contexts/scheduling';
 
@@ -31,14 +30,11 @@ const PatientData = (props) => {
 
     return (
         <Container>
-            <PatientDataTitleContainer>
-                <PatientDataTitle>
-                    Dados do paciente
-                </PatientDataTitle>
-                <PatientDataSubtitle>
-                    Preencha os campos a baixo com os dados do paciente.
-                </PatientDataSubtitle>
-            </PatientDataTitleContainer>
+
+            <Title 
+                title="Dados do paciente" 
+                subtitle="Preencha os campos abaixo com os dados do paciente"/>
+
             <FormContainer>
                 <FormField placeholder="Nome" value={name} onChangeText={setName}/>
                 <FormField placeholder="CPF" keyboardType="numeric" value={cpf} onChangeText={setCpf}/>

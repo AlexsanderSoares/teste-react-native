@@ -4,6 +4,7 @@ import { Container, MedicalSpecialtyTitleContainer, MedicalSpecialtyTitle,
                                               MedicalSpecialtySubTitle, FormContainer } from './styles';
 import {Picker} from '@react-native-picker/picker';
 import Button from '../../components/Button';
+import Title from '../../components/Title';
 
 import {SchedulingContext} from '../../contexts/scheduling';
 
@@ -21,14 +22,9 @@ const MedicalSpecialty = (props) => {
 
   return (
         <Container>
-            <MedicalSpecialtyTitleContainer>
-                <MedicalSpecialtyTitle>
-                    Especialidade médica
-                </MedicalSpecialtyTitle>
-                <MedicalSpecialtySubTitle>
-                    Selecione abaixo para qual especialidade médica que você deseja fazer o agendamento.
-                </MedicalSpecialtySubTitle>
-            </MedicalSpecialtyTitleContainer>
+            <Title 
+                title="Especialidade médica" 
+                subtitle="Selecione abaixo para qual especialidade médica que você deseja fazer o agendamento"/>
             <FormContainer>
               <Picker
                 selectedValue={selectedMedicalSpecialty}

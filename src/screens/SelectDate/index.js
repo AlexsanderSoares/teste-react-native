@@ -1,11 +1,9 @@
 import React, {useContext, useState} from 'react';
 import CalendarPicker from 'react-native-calendar-picker';
-import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 
-import { Container, SelectDateTitleContainer, SelectDateTitle, 
-                                SelectDateSubtitle } from './styles';
-
+import { Container } from './styles';
 import Button from '../../components/Button';
+import Title from '../../components/Title';
 
 import {SchedulingContext} from '../../contexts/scheduling';
 
@@ -23,14 +21,9 @@ const SelectDate = (props) => {
 
     return (
         <Container>
-            <SelectDateTitleContainer>
-                <SelectDateTitle>
-                    Selecione uma data
-                </SelectDateTitle>
-                <SelectDateSubtitle>
-                    Selecione a data que você deseja agendar o atendimento.
-                </SelectDateSubtitle>
-            </SelectDateTitleContainer>
+            <Title 
+                title="Selecione uma data" 
+                subtitle="Selecione a data que você deseja agendar o atendimento"/>
             <CalendarPicker onDateChange={setSelectedDate} selectedDayColor="#fff"/>
             <Button 
                 text="Proximo passo"
