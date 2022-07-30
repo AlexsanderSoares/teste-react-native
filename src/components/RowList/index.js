@@ -5,7 +5,7 @@ const RowList = (props) => {
   return (
         <RowContainer>
             <Label>
-                {props.label}
+                {props.label}:
             </Label>
             <Info>
                 {props.info}
