@@ -1,9 +1,10 @@
 import React, {useState, useContext} from 'react';
-import {Alert} from 'react-native';
-import { Container, FormContainer, FormField } from './styles';
+import {Alert, Text} from 'react-native';
+import { Container, FormContainer } from './styles';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 import {SchedulingContext} from '../../contexts/scheduling';
+import FormField from '../../components/FormField';
 
 const PatientData = (props) => {
 
