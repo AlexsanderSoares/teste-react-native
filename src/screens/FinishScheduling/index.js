@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import { Container, FinishSchedulingTitleContainer, 
                 FinishSchedulingTitle, FinishSchedulingSubtitle, 
                         RowContainer, InfoContainer, Label, Info,
-                                FinishButtonContainer, FinishButton, FinishButtonText } from './styles';
-import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
+                                FinishButtonContainer} from './styles';
+
+import Button from '../../components/Button';
 
 import api from '../../services/api/axios';
 
@@ -86,13 +87,10 @@ const FinishScheduling = (props) => {
                     </Info>
                 </RowContainer>
             </InfoContainer>
-            <FinishButtonContainer>
-                <FinishButton onPress={handleFinishScheduling}>
-                    <FinishButtonText>
-                        Confirmar agendamento
-                    </FinishButtonText>
-                </FinishButton>
-            </FinishButtonContainer>
+            <Button 
+                text="Confirmar"
+                onPress={() => handleFinishScheduling()} 
+                icon="check"/>
         </Container>
     );
 }

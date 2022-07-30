@@ -1,10 +1,11 @@
 import React, {useContext, useState} from 'react';
 import CalendarPicker from 'react-native-calendar-picker';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
-import {Text} from 'react-native';
 
 import { Container, SelectDateTitleContainer, SelectDateTitle, 
-                                SelectDateSubtitle, ButtonNextConatiner, ButtonNext, ButtonNextText } from './styles';
+                                SelectDateSubtitle } from './styles';
+
+import Button from '../../components/Button';
 
 import {SchedulingContext} from '../../contexts/scheduling';
 
@@ -31,14 +32,10 @@ const SelectDate = (props) => {
                 </SelectDateSubtitle>
             </SelectDateTitleContainer>
             <CalendarPicker onDateChange={setSelectedDate} selectedDayColor="#fff"/>
-            <ButtonNextConatiner>
-                <ButtonNext onPress={handleNext}>
-                    <ButtonNextText>
-                        Conferir e agendar
-                        <IconFontAwesome name="arrow-right" color="#777" size={18}/>
-                    </ButtonNextText>
-                </ButtonNext>
-            </ButtonNextConatiner>
+            <Button 
+                text="Proximo passo"
+                onPress={() => handleNext()} 
+                icon="arrow-right"/>
         </Container>
     );
 }

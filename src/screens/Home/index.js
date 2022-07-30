@@ -1,9 +1,8 @@
 import React from 'react';
 import { Container, WelcomeTextContainer, 
-                WelcomeTextTitle, WelcomeTextSubtitle, 
-                    StartSchedulingContainer, StartSchedulingButton, StartSchedulingButtonText } from './styles';
+                WelcomeTextTitle, WelcomeTextSubtitle, StartSchedulingContainer} from './styles';
 
-import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
+import Button from '../../components/Button';
 
 const Home = (props) => {
   return (
@@ -15,14 +14,10 @@ const Home = (props) => {
             <WelcomeTextSubtitle>
                 Toque no botão abaixo para fazer o agendamento da consulta.
             </WelcomeTextSubtitle>
-            <StartSchedulingContainer>
-                <StartSchedulingButton onPress={() => props.navigation.navigate("PatientData")}>
-                    <StartSchedulingButtonText>
-                        Comerçar
-                        <IconFontAwesome name="arrow-right" size={20} color="#777" />
-                    </StartSchedulingButtonText>
-                </StartSchedulingButton>
-            </StartSchedulingContainer>
+            <Button 
+                    text="Começar"
+                    onPress={() => props.navigation.navigate("PatientData")} 
+                    icon="arrow-right"/>
         </WelcomeTextContainer>
     </Container>
   );

@@ -2,9 +2,9 @@ import React, {useState, useContext} from 'react';
 import {Alert} from 'react-native';
 import { Container, ScrollViewPatientData, PatientDataTitleContainer, 
             PatientDataTitle, PatientDataSubtitle, FormContainer, 
-                    FormField, ButtonNext, ButtonNextText } from './styles';
+                    FormField } from './styles';
 
-import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
+import Button from '../../components/Button';
 
 import {SchedulingContext} from '../../contexts/scheduling';
 
@@ -44,12 +44,10 @@ const PatientData = (props) => {
                 <FormField placeholder="CPF" keyboardType="numeric" value={cpf} onChangeText={setCpf}/>
                 <FormField placeholder="Data de nascimento" keyboardType="numeric" value={birthDate} onChangeText={setBirthDate}/>
                 <FormField placeholder="Telefone" keyboardType="phone-pad" value={phone} onChangeText={setPhone}/>
-                <ButtonNext>
-                    <ButtonNextText onPress={handleNext}>
-                        Proximo passo
-                        <IconFontAwesome name='arrow-right' color="#777" size={20}/>
-                    </ButtonNextText>
-                </ButtonNext>
+                <Button 
+                    text="Proximo passo"
+                    onPress={() => handleNext()} 
+                    icon="arrow-right"/>
             </FormContainer>
         </Container>
     );

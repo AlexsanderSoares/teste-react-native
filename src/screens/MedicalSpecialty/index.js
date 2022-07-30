@@ -1,10 +1,9 @@
 import React, {useState, useContext} from 'react';
 
 import { Container, MedicalSpecialtyTitleContainer, MedicalSpecialtyTitle, 
-                                              MedicalSpecialtySubTitle, FormContainer, ButtonNextContainer,
-                                                                ButtonNext, ButtonNextText } from './styles';
+                                              MedicalSpecialtySubTitle, FormContainer } from './styles';
 import {Picker} from '@react-native-picker/picker';
-import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
+import Button from '../../components/Button';
 
 import {SchedulingContext} from '../../contexts/scheduling';
 
@@ -46,14 +45,10 @@ const MedicalSpecialty = (props) => {
                   <Picker.Item label="Clínico Geral" value="Clínico Geral" />
               </Picker>
             </FormContainer>
-            <ButtonNextContainer>
-                <ButtonNext onPress={handleNext}>
-                    <ButtonNextText>
-                        Proximo passo
-                        <IconFontAwesome name='arrow-right' color="#777" size={20}/>
-                    </ButtonNextText>
-                </ButtonNext>
-            </ButtonNextContainer>
+            <Button
+              text="Proximo passo"
+              onPress={() => handleNext()} 
+              icon="arrow-right"/>
         </Container>
   );
 }
