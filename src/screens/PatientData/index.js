@@ -5,7 +5,6 @@ import Button from '../../components/Button';
 import Title from '../../components/Title';
 import {SchedulingContext} from '../../contexts/scheduling';
 import FormField from '../../components/FormField';
-import MaskInput, { Masks } from 'react-native-mask-input';
 
 const PatientData = (props) => {
 

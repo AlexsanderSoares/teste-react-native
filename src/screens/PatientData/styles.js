@@ -18,12 +18,3 @@ export const FormContainer = styled.View`
     width: 100%;
     align-items:center;
 `;
-
-export const FormField = styled.TextInput`
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    width: 95%;
-    height: 60px;
-    margin-top: 10px;
-`;
