@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, FinishSchedulingTitleContainer, 
                 FinishSchedulingTitle, FinishSchedulingSubtitle, 
                         RowContainer, InfoContainer, Label, Info,
                                 FinishButtonContainer, FinishButton, FinishButtonText } from './styles';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 
+import {SchedulingContext} from '../../contexts/scheduling';
+
 const FinishScheduling = () => {
+
+    const {scheduling} = useContext(SchedulingContext);
+
+    console.log(scheduling.dateScheduling);
+
     return (
         <Container>
             <FinishSchedulingTitleContainer>
@@ -22,7 +29,7 @@ const FinishScheduling = () => {
                         Nome: 
                     </Label>
                     <Info>
-                        Alexsander
+                        {scheduling.name}
                     </Info>
                 </RowContainer>
                 <RowContainer>
@@ -30,7 +37,7 @@ const FinishScheduling = () => {
                         CPF: 
                     </Label>
                     <Info>
-                        076.522.283-36
+                        {scheduling.cpf}
                     </Info>
                 </RowContainer>
                 <RowContainer>
@@ -38,7 +45,7 @@ const FinishScheduling = () => {
                         Data de nascimento: 
                     </Label>
                     <Info>
-                        19/11/1999
+                        {scheduling.birthDate}
                     </Info>
                 </RowContainer>
                 <RowContainer>
@@ -46,7 +53,7 @@ const FinishScheduling = () => {
                         Telefone: 
                     </Label>
                     <Info>
-                        (86) 99557-7042
+                        {scheduling.phone}
                     </Info>
                 </RowContainer>
                 <RowContainer>
@@ -54,7 +61,7 @@ const FinishScheduling = () => {
                         Especialidade médica: 
                     </Label>
                     <Info>
-                        Cardiologista
+                        {scheduling.medicalSpecialty}
                     </Info>
                 </RowContainer>
                 <RowContainer>
@@ -62,7 +69,7 @@ const FinishScheduling = () => {
                         Data para agendamento: 
                     </Label>
                     <Info>
-                        28/07/2022
+                        {new Date(scheduling.dateScheduling).toLocaleDateString()}
                     </Info>
                 </RowContainer>
             </InfoContainer>
