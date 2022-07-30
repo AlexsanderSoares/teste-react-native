@@ -6,7 +6,7 @@ function SchedulingProvider({children}){
 
     const [patient, setPatient] = useState({});
     const [medicalSpecialty, setMedicalSpecialty] = useState("");
-    const [dateScheduling, setDateScheduling] = useState(null);
+    const [dateScheduling, setDateScheduling] = useState(new Date());
 
     function savePatientData(patient){
         setPatient(patient);

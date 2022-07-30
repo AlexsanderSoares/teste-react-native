@@ -13,7 +13,7 @@ const SelectDate = (props) => {
     const {saveDateScheduling} = useContext(SchedulingContext);
 
     function handleNext(){
-        saveDateScheduling(selectedDate.toJSON());
+        saveDateScheduling(selectedDate);
 
         props.navigation.navigate("FinishScheduling");
     }
@@ -25,7 +25,7 @@ const SelectDate = (props) => {
                 subtitle="Selecione a data e a hora que você deseja agendar o atendimento"/>
             <DatePicker
                 date={selectedDate}
-                onConfirm={(date) => {
+                onDateChange={(date) => {
                     setSelectedDate(date)
                 }}
                 textColor="#555"

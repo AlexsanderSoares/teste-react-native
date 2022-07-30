@@ -23,6 +23,10 @@ const FinishScheduling = (props) => {
         props.navigation.navigate("Home");
     } 
 
+    function formatDate(date){
+        return `${date.getDate()}/${"0" + (date.getMonth() + 1)}/${date.getFullYear()} - ${date.getHours()}:${date.getMinutes()}`;
+    }
+
     return (
         <Container>
             <Title 
@@ -34,7 +38,7 @@ const FinishScheduling = (props) => {
                 <RowList label="Data de nascimento" info={scheduling.birthDate}/>
                 <RowList label="Telefone" info={scheduling.phone}/>
                 <RowList label="Especialidade médica" info={scheduling.medicalSpecialty}/>
-                <RowList label="Data para agendamento" info={new Date(scheduling.dateScheduling).toLocaleDateString()}/>
+                <RowList label="Data para agendamento" info={formatDate(scheduling.dateScheduling)}/>
             </InfoContainer>
             <Button 
                 text="Confirmar"
