@@ -11,8 +11,6 @@ const FinishScheduling = () => {
 
     const {scheduling} = useContext(SchedulingContext);
 
-    console.log(scheduling.dateScheduling);
-
     return (
         <Container>
             <FinishSchedulingTitleContainer>
