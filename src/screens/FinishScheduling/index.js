@@ -1,14 +1,8 @@
 import React, { useContext } from 'react';
-import { Container, FinishSchedulingTitleContainer, 
-                FinishSchedulingTitle, FinishSchedulingSubtitle, 
-                        RowContainer, InfoContainer, Label, Info,
-                                FinishButtonContainer} from './styles';
-
+import { Container, RowContainer, InfoContainer, Label, Info,} from './styles';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
-
 import api from '../../services/api/axios';
-
 import {SchedulingContext} from '../../contexts/scheduling';
 import { Alert } from 'react-native';
 
@@ -24,7 +18,6 @@ const FinishScheduling = (props) => {
         else
             Alert.alert("Erro", "Não foi possível fazer o agendamento");
 
-        
         props.navigation.navigate("Home");
     } 
 

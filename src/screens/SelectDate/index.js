@@ -1,16 +1,13 @@
 import React, {useContext, useState} from 'react';
 import CalendarPicker from 'react-native-calendar-picker';
-
 import { Container } from './styles';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
-
 import {SchedulingContext} from '../../contexts/scheduling';
 
 const SelectDate = (props) => {
 
     const [selectedDate, setSelectedDate] = useState("");
-
     const {saveDateScheduling} = useContext(SchedulingContext);
 
     function handleNext(){

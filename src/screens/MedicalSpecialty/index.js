@@ -1,17 +1,13 @@
 import React, {useState, useContext} from 'react';
-
-import { Container, MedicalSpecialtyTitleContainer, MedicalSpecialtyTitle, 
-                                              MedicalSpecialtySubTitle, FormContainer } from './styles';
+import { Container, FormContainer } from './styles';
 import {Picker} from '@react-native-picker/picker';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
-
 import {SchedulingContext} from '../../contexts/scheduling';
 
 const MedicalSpecialty = (props) => {
 
   const [selectedMedicalSpecialty, setSelectedMedicalSpecialty] = useState("");
-
   const {saveMedicalSpecialty} = useContext(SchedulingContext);
 
   function handleNext(){

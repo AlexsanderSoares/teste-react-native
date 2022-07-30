@@ -1,7 +1,5 @@
 import React from 'react';
-import { Container, WelcomeTextContainer, 
-                WelcomeTextTitle, WelcomeTextSubtitle, StartSchedulingContainer} from './styles';
-
+import { Container} from './styles';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 

@@ -1,23 +1,19 @@
 import React, {useState, useContext} from 'react';
 import {Alert} from 'react-native';
 import { Container, FormContainer, FormField } from './styles';
-
 import Button from '../../components/Button';
 import Title from '../../components/Title';
-
 import {SchedulingContext} from '../../contexts/scheduling';
 
 const PatientData = (props) => {
 
     const {savePatientData} = useContext(SchedulingContext);
-
     const [name, setName] = useState('');
     const [cpf, setCpf] = useState('');
     const [birthDate, setBirthDate] = useState('');
     const [phone, setPhone] = useState('');
 
     function handleNext(){
-
         if(!name || !cpf || !birthDate || !phone){
             Alert.alert("Erro", "Preencha todos os campos");
             return;
