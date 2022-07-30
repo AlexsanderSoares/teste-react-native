@@ -8,21 +8,24 @@ import MedicalSpecialty from './screens/MedicalSpecialty';
 import SelectDate from './screens/SelectDate';
 import FinishScheduling from './screens/FinishScheduling';
 
+import SchedulingProvider from './contexts/scheduling'
+
 const Stack = createNativeStackNavigator();
 
 const headerConfig = {headerShown: true, headerTransparent: true, 
                                   headerTitle: '', headerTintColor: "#fff"}
 const App = () => {
   return (
-
     <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
-            <Stack.Screen name="PatientData" component={PatientData} options={headerConfig}/>
-            <Stack.Screen name="MedicalSpecialty" component={MedicalSpecialty} options={headerConfig}/>
-            <Stack.Screen name="SelectDate" component={SelectDate} options={headerConfig}/>
-            <Stack.Screen name="FinishScheduling" component={FinishScheduling} options={headerConfig}/>
-        </Stack.Navigator>
+        <SchedulingProvider>
+            <Stack.Navigator>
+                <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
+                <Stack.Screen name="PatientData" component={PatientData} options={headerConfig}/>
+                <Stack.Screen name="MedicalSpecialty" component={MedicalSpecialty} options={headerConfig}/>
+                <Stack.Screen name="SelectDate" component={SelectDate} options={headerConfig}/>
+                <Stack.Screen name="FinishScheduling" component={FinishScheduling} options={headerConfig}/>
+            </Stack.Navigator>
+        </SchedulingProvider>
     </NavigationContainer>
 
   );
