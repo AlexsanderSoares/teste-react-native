@@ -5,11 +5,26 @@ import { Container, FinishSchedulingTitleContainer,
                                 FinishButtonContainer, FinishButton, FinishButtonText } from './styles';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 
-import {SchedulingContext} from '../../contexts/scheduling';
+import api from '../../services/api/axios';
 
-const FinishScheduling = () => {
+import {SchedulingContext} from '../../contexts/scheduling';
+import { Alert } from 'react-native';
+
+const FinishScheduling = (props) => {
 
     const {scheduling} = useContext(SchedulingContext);
+
+    async function handleFinishScheduling(){
+        const response = await api.post('/', scheduling);
+
+        if(response.status === 200)
+            Alert.alert("Sucesso", "O seu agendamento foi realizado com sucesso.");
+        else
+            Alert.alert("Erro", "Não foi possível fazer o agendamento");
+
+        
+        props.navigation.navigate("Home");
+    } 
 
     return (
         <Container>
@@ -72,7 +87,7 @@ const FinishScheduling = () => {
                 </RowContainer>
             </InfoContainer>
             <FinishButtonContainer>
-                <FinishButton>
+                <FinishButton onPress={handleFinishScheduling}>
                     <FinishButtonText>
                         Confirmar agendamento
                     </FinishButtonText>
