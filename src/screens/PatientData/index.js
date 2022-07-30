@@ -5,6 +5,7 @@ import Button from '../../components/Button';
 import Title from '../../components/Title';
 import {SchedulingContext} from '../../contexts/scheduling';
 import FormField from '../../components/FormField';
+import MaskInput, { Masks } from 'react-native-mask-input';
 
 const PatientData = (props) => {
 
@@ -33,10 +34,10 @@ const PatientData = (props) => {
                 subtitle="Preencha os campos abaixo com os dados do paciente"/>
 
             <FormContainer>
-                <FormField placeholder="Nome" value={name} onChangeText={setName}/>
-                <FormField placeholder="CPF" keyboardType="numeric" value={cpf} onChangeText={setCpf}/>
-                <FormField placeholder="Data de nascimento" keyboardType="numeric" value={birthDate} onChangeText={setBirthDate}/>
-                <FormField placeholder="Telefone" keyboardType="phone-pad" value={phone} onChangeText={setPhone}/>
+                <FormField placeholder="Nome" value={name} onChangeText={setName} mask="name"/>
+                <FormField placeholder="CPF" keyboardType="numeric" value={cpf} onChangeText={setCpf} mask="cpf"/>
+                <FormField placeholder="Data de nascimento" keyboardType="numeric" value={birthDate} onChangeText={setBirthDate} mask="birthDate"/>
+                <FormField placeholder="Phone" keyboardType="phone-pad" value={phone} onChangeText={setPhone} mask="phone"/>
                 <Button 
                     text="Proximo passo"
                     onPress={() => handleNext()} 
