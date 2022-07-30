@@ -7,7 +7,7 @@ export const RowContainer = styled.View`
     margin-top: 0px;
     padding: 12px;
     background-color: #fff;
-    text-overflow: unset;
+    flex-wrap: wrap;
 `;
 
 export const Label = styled.Text`

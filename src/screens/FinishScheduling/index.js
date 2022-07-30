@@ -38,7 +38,7 @@ const FinishScheduling = (props) => {
                 <RowList label="Data de nascimento" info={scheduling.birthDate}/>
                 <RowList label="Telefone" info={scheduling.phone}/>
                 <RowList label="Especialidade médica" info={scheduling.medicalSpecialty}/>
-                <RowList label="Data para agendamento" info={formatDate(scheduling.dateScheduling)}/>
+                <RowList label="Data e hora para agendamento" info={formatDate(scheduling.dateScheduling)}/>
             </InfoContainer>
             <Button 
                 text="Confirmar"
