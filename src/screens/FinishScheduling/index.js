@@ -33,6 +33,9 @@ const FinishScheduling = (props) => {
         }catch(err){
 
             setLoading(false);
+
+            console.log(err);
+
             Alert.alert("Erro", "Erro inesperado.");
 
         }
@@ -59,9 +62,9 @@ const FinishScheduling = (props) => {
             </InfoContainer>
             <Button 
                 disabled={loading}
-                text="Confirmar"
+                text={loading ? "Enviando..." : "Confirmar"}
                 onPress={() => handleFinishScheduling()} 
-                icon="check"/>
+                icon={loading ? null : "check"}/>
         </Container>
     );
 }
