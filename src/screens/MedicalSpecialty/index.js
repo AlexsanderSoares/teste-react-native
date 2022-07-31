@@ -4,6 +4,7 @@ import {Picker} from '@react-native-picker/picker';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 import {SchedulingContext} from '../../contexts/scheduling';
+import { Alert } from 'react-native';
 
 const MedicalSpecialty = (props) => {
 
@@ -11,6 +12,12 @@ const MedicalSpecialty = (props) => {
   const {saveMedicalSpecialty} = useContext(SchedulingContext);
 
   function handleNext(){
+
+      if(!selectedMedicalSpecialty){
+         Alert.alert("Erro", "Selecione a especialidade médica");
+         return;
+      }
+
       saveMedicalSpecialty(selectedMedicalSpecialty);
 
       props.navigation.navigate("SelectDate");

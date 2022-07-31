@@ -19,7 +19,7 @@ const FinishScheduling = (props) => {
             if(!loading){
                 setLoading(true);
 
-                const response = await api.post('/', scheduling);
+                const response = await api.post('/', scheduling, {timeout: 10000});
 
                 if(response.status === 200)
                     Alert.alert("Sucesso", "O seu agendamento foi enviado");
@@ -32,7 +32,7 @@ const FinishScheduling = (props) => {
             }
         }catch(err){
 
-            console.log(err);
+            setLoading(false);
             Alert.alert("Erro", "Erro inesperado.");
 
         }
