@@ -13,26 +13,36 @@ const FinishScheduling = (props) => {
     const {scheduling} = useContext(SchedulingContext);
     const [loading, setLoading] = useState(false);
 
+
     async function handleFinishScheduling(){
+        try{
+            if(!loading){
+                setLoading(true);
 
-        setLoading(true);
+                const response = await api.post('/', scheduling);
 
-        const response = await api.post('/', scheduling);
+                if(response.status === 200)
+                    Alert.alert("Sucesso", "O seu agendamento foi enviado");
+                else
+                    Alert.alert("Erro", "Não foi possível enviar o agendamento");
 
-        if(response.status === 200)
-            Alert.alert("Sucesso", "O seu agendamento foi realizado com sucesso.");
-        else
-            Alert.alert("Erro", "Não foi possível fazer o agendamento");
+                setLoading(false);
 
-        
-        setLoading(false);
+                props.navigation.navigate("Home");
+            }
+        }catch(err){
 
-        props.navigation.navigate("Home");
+            console.log(err);
+            Alert.alert("Erro", "Erro inesperado.");
+
+        }
     } 
+
 
     function formatDate(date){
         return `${date.getDate()}/${"0" + (date.getMonth() + 1)}/${date.getFullYear()} - ${date.getHours()}:${date.getMinutes()}`;
     }
+
 
     return (
         <Container>

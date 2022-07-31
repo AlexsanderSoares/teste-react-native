@@ -7,7 +7,9 @@ export const ButtonContainer = styled.View`
     margin-top: 50px;
 `;
 
-export const ButtonComponent = styled.TouchableOpacity`
+export const ButtonComponent = styled.TouchableOpacity.attrs(props => ({
+    disabled: props.disabled
+}))`
     width: 250px;
     height: 60px;
     border-radius: 20px;

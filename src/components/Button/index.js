@@ -6,7 +6,7 @@ import { ButtonComponent, ButtonText, ButtonContainer } from './styles';
 const Button = (props) => {
   return (
     <ButtonContainer>
-        <ButtonComponent onPress={props.onPress}>
+        <ButtonComponent onPress={props.onPress} disabled={props.disabled}>
             <>
                 <ButtonText>
                     {props.text}
