@@ -3,7 +3,7 @@ import LinearGradient from 'react-native-linear-gradient'
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 export const Container = styled(LinearGradient).attrs({
-    colors: ['#00FF7F', '#00FA9A'],
+    colors: ['#3CB371', '#00FA9A'],
     start: {x: 0, y: 0},
     end: {x: 1, y: 1}
 })`
