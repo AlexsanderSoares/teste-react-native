@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {Alert, Text} from 'react-native';
-import { Container, FormContainer } from './styles';
+import { FormContainer } from './styles';
+import Container from '../../components/Container';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 import {SchedulingContext} from '../../contexts/scheduling';

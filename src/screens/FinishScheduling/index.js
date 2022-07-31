@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Container, InfoContainer} from './styles';
+import { InfoContainer} from './styles';
+import Container from '../../components/Container';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 import api from '../../services/api/axios';

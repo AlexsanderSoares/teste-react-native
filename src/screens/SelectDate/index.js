@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import CalendarPicker from 'react-native-calendar-picker';
-import { Container } from './styles';
+import Container from '../../components/Container';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 import {SchedulingContext} from '../../contexts/scheduling';

@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
-import { Container, FormContainer } from './styles';
+import { FormContainer } from './styles';
+import Container from '../../components/Container';
 import {Picker} from '@react-native-picker/picker';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
