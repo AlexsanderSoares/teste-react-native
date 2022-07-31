@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Container, InfoContainer} from './styles';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
@@ -11,14 +11,21 @@ import RowList from '../../components/RowList';
 const FinishScheduling = (props) => {
 
     const {scheduling} = useContext(SchedulingContext);
+    const [loading, setLoading] = useState(false);
 
     async function handleFinishScheduling(){
+
+        setLoading(true);
+
         const response = await api.post('/', scheduling);
 
         if(response.status === 200)
             Alert.alert("Sucesso", "O seu agendamento foi realizado com sucesso.");
         else
             Alert.alert("Erro", "Não foi possível fazer o agendamento");
+
+        
+        setLoading(false);
 
         props.navigation.navigate("Home");
     } 
@@ -41,6 +48,7 @@ const FinishScheduling = (props) => {
                 <RowList label="Data e hora para agendamento" info={formatDate(scheduling.dateScheduling)}/>
             </InfoContainer>
             <Button 
+                disabled={loading}
                 text="Confirmar"
                 onPress={() => handleFinishScheduling()} 
                 icon="check"/>
